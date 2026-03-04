@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Aythami</title>
+<style>
+
+html {
+    scroll-behavior: smooth;
+}
+    body {
+        background: #0f0f1a;
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* barra de navegacion */
+    .navbar {
+        background: #1a1a2e;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #7c3aed;
+    }
+
+    .navbar h2 {
+        color: #38bdf8;
+        margin: 0;
+    }
+
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        margin-left: 15px;
+        font-size: 14px;
+    }
+
+    .navbar a:hover {
+        color: #38bdf8;
+    }
+
+    .navbtn {
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        margin-left: 15px;
+        font-size: 14px;
+        font-family: Arial, sans-serif;
+    }
+
+    .navbtn:hover {
+        color: #38bdf8;
+    }
+
+    /* seccion principal */
+    .principal {
+        display: flex;
+        padding: 50px 40px;
+        gap: 30px;
+        align-items: center;
+        max-width: 850px;
+        margin: auto;
+    }
+
+    .principal img {
+        width: 160px;
+        height: 200px;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 8px;
+        border: 2px solid #7c3aed;
+    }
+
+    .principal h1 {
+        color: #38bdf8;
+        margin-bottom: 5px;
+    }
+
+    .principal h3 {
+        color: #a78bfa;
+        font-weight: normal;
+        margin-bottom: 15px;
+        margin-top: 0;
+    }
+
+    .principal p {
+        color: #cccccc;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    /* boton */
+    .boton {
+        background: #7c3aed;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .boton:hover {
+        background: #6d28d9;
+    }
+
+    /* secciones */
+    .seccion {
+        max-width: 850px;
+        margin: auto;
+        padding: 40px;
+        border-top: 1px solid #2a2a4a;
+    }
+
+    .seccion h2 {
+        color: #38bdf8;
+        margin-bottom: 20px;
+    }
+
+    .seccion p {
+        color: #cccccc;
+        line-height: 1.7;
+        margin-bottom: 10px;
+    }
+
+    /* sobre mi datos de contacto */
+    .seccion a {
+        color: #a78bfa;
+        display: block;
+        margin-top: 8px;
+        font-size: 14px;
+    }
+
+    /* tecnologias los tags */
+    .tag {
+        display: inline-block;
+        border: 1px solid #7c3aed;
+        color: #a78bfa;
+        padding: 5px 12px;
+        border-radius: 15px;
+        font-size: 13px;
+        margin: 4px;
+    }
+
+    .tag.azul {
+        border-color: #38bdf8;
+        color: #7dd3fc;
+    }
+
+    /* tarjetas de formacion */
+    .tarjeta {
+        background: #1a1a2e;
+        border-left: 3px solid #7c3aed;
+        padding: 15px 18px;
+        margin-bottom: 15px;
+        border-radius: 4px;
+    }
+
+    .tarjeta h3 {
+        margin: 0 0 5px 0;
+        font-size: 15px;
+    }
+
+    .tarjeta .fecha {
+        color: #38bdf8;
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+
+    .tarjeta .empresa {
+        color: #a78bfa;
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+
+    .tarjeta p, .tarjeta li {
+        color: #aaaaaa;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .tarjeta ul {
+        padding-left: 18px;
+        margin-top: 5px;
+    }
+
+    /* grid cursos */
+    .cursos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .curso {
+        background: #1a1a2e;
+        padding: 14px;
+        border-radius: 6px;
+        border: 1px solid #2a2a4a;
+    }
+
+    .curso:hover {
+        border-color: #7c3aed;
+    }
+
+    .curso span {
+        color: #38bdf8;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    .curso p {
+        color: #cccccc;
+        font-size: 14px;
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+
+    /* habilidades */
+    .habilidad {
+        display: inline-block;
+        background: #1a1a2e;
+        border: 1px solid #2a2a4a;
+        color: #cccccc;
+        padding: 7px 14px;
+        border-radius: 5px;
+        font-size: 14px;
+        margin: 4px;
+    }
+
+    /* contacto */
+    #contacto {
+        text-align: center;
+    }
+
+    #contacto p {
+        color: #aaaaaa;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        color: #444;
+        font-size: 13px;
+        border-top: 1px solid #2a2a4a;
+    }
+
+    @media (max-width: 600px) {
+        .principal {
+            flex-direction: column;
+            padding: 30px 20px;
+        }
+        .cursos {
+            grid-template-columns: 1fr;
+        }
+        .navbar a {
+            margin-left: 8px;
+            font-size: 12px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="navbar">
+    <div>
+        <button class="navbtn" data-id="sobre-mi"><a href="#sobre-mi">Sobre mí</a></button>
+        <button class="navbtn" data-id="tecnologias"><a href="#tecnologias">Tecnologías</a></button>
+        <button class="navbtn" data-id="formacion"><a href="#formacion">Formación</a></button>
+        <button class="navbtn" data-id="contacto"><a href="#contacto">Contacto</a></button>
+        <button class="navbtn" data-id="cursos"><a href="#cursos">Cursos</a></button>
+        <button class="navbtn" data-id="habilidades"><a href="#habilidades">Habilidades</a></button>
+    </div>
+</div>
+
+<div class="principal">
+    <img src="mifoto.jpg" alt="foto mia">
+    <div>
+        <h1>Hola, soy Aythami Reyes Melian</h1>
+        <h3>Estudiante de DAW de 1º año</h3>
+        <p>
+            Profesional procedente del sector de telecomunicaciones, con experiencia en entornos técnicos, 
+            resolución de incidencias y trabajo con sistemas y redes. En proceso de transición hacia el desarrollo web, 
+            con 6 meses de formación práctica en tecnologías fundamentales del desarrollo frontend y backend.
+        </p>
+    </div>
+</div>
+
+<div class="seccion" id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>
+        Soy una persona responsable, con facilidad para trabajar en equipo y con una fuerte motivación por aprender y mejorar continuamente. 
+        Me apasiona el mundo de la informática y, especialmente, el desarrollo web, área en la que estoy formándome y creciendo de manera constante. 
+        Disfruto enfrentándome a nuevos retos técnicos y ampliando mis conocimientos para aportar valor en cada proyecto.
+    </p>
+    <a>Las Palmas de Gran Canaria</a>
+    <br>
+</div>
+<div class="seccion" id="contacto">
+    <h2>Contacto</h2>
+    <p>Puedes ponerte en contacto conmigo cuando lo desees.</p>
+    <p>Correo: aythami.reyes1@gmail.com</a>
+    <p>Teléfono Móvil: 607 083 431</p>
+</div>
+
+<div class="seccion" id="tecnologias">
+    <h2>Tecnologías</h2>
+    <p style="color:#888; font-size:13px; margin-bottom:8px;">Lo que estoy aprendiendo en DAW:</p>
+    <div>
+        <span class="tag">HTML5</span>
+        <span class="tag">CSS3</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Java</span>
+        <span class="tag">Git</span>
+        <span class="tag">Bases de datos</span>
+    </div>
+    <p style="color:#888; font-size:13px; margin-bottom:8px;">Lo que estoy aprendiendo en cursos:</p>
+    <div>
+        <span class="tag">PHP</span>
+        <span class="tag">Python</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">Git</span>
+        <span class="tag">Bases de datos</span>
+    </div>
+    <p style="color:#888; font-size:13px; margin-top:15px; margin-bottom:8px;">De mi etapa en telecomunicaciones:</p>
+    <div>
+        <span class="tag azul">Redes Ethernet</span>
+        <span class="tag azul">Telecomunicaciones</span>
+        <span class="tag azul">Sistemas de seguridad</span>
+        <span class="tag azul">Hardware</span>
+    </div>
+</div>
+
+<div class="seccion" id="formacion">
+
+    <h2>Formación y experiencia</h2>
+
+<div class="tarjeta">
+    <h3>Desarrollo de Aplicaciones Web - DAW</h3>
+    <div class="fecha">2025 - Actualidad (1º año)</div>
+    <p>Aprendiendo HTML, CSS, JavaScript, Java, PHP, bases de datos... Prácticas para 2026.</p>
+</div>
+
+<div class="tarjeta">
+    <h3>Técnico en Telecomunicaciones - INSMOELCA</h3>
+    <div class="fecha">3 meses</div>
+    <ul>
+        <li>Instalación de sistemas de seguridad y contra incendios</li>
+        <li>Redes locales y telemática</li>
+        <li>Montaje y mantenimiento de equipos</li>
+        <li>Instalaciones eléctricas y telecomunicaciones</li>
+        <li>Instalador de antenas</li>
+    </ul>
+</div>
+
+<div class="tarjeta">
+    <h3>Grado Medio - Telecomunicaciones</h3>
+    <div class="fecha">2021 - 2023</div>
+    <p>Redes, sistemas de seguridad, equipos informáticos y telecomunicaciones.</p>
+</div>
+
+<div class="tarjeta">
+    <h3>ESO</h3>
+    <div class="fecha">2014 - 2018</div>
+</div>
+
+</div>
+
+<div class="seccion" id="cursos">
+    <h2>Cursos</h2>
+    <div class="cursos">
+        <div class="curso">
+            <span>Google</span>
+            <p>Inteligencia Artificial y Productividad</p>
+        </div>
+        <div class="curso">
+            <span>Adecco</span>
+            <p>Cómo optimizar y dar un buen uso a la IA</p>
+        </div>
+        <div class="curso">
+            <span>eFundae</span>
+            <p>Lenguajes de Programación Web Frontend y Backend nivel Básico.</p>
+        </div>
+        <div class="curso">
+            <span>eFundae</span>
+            <p>Lenguajes de Programación Web Frontend y Backend nivel Avanzado.</p>
+        </div>
+        <div class="curso">
+            <span>Píldoras Informáticas</span>
+            <p>JavaScript desde 0</p>
+        </div>
+        <div class="curso">
+            <span>BIG school. mouredev. BIGSEO.</span>
+            <p>Curso de Desarrollo Con IA De 0 A Producción.</p>
+        </div>
+    </div>
+</div>
+
+<div class="seccion" id="habilidades">
+    <h2>Habilidades</h2>
+    <div>
+        <span class="habilidad">🤝 Trabajo en equipo</span>
+        <span class="habilidad">📖 Ganas de aprender</span>
+        <span class="habilidad">✅ Responsabilidad</span>
+        <span class="habilidad">💬 Comunicación</span>
+        <span class="habilidad">⚡ Trabajo bajo presión</span>
+        <span class="habilidad">😊 Positivismo</span>
+        <span class="habilidad">🗂️ Organización</span>
+        <span class="habilidad">🔧 Solución de problemas</span>
+    </div>
+</div>
+
+<footer>
+    <p>2026 Aythami Reyes, Mi CV hecho con HTML y CSS.</p>
+</footer>
