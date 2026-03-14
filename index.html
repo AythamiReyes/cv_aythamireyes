@@ -18,6 +18,58 @@ html {
         padding: 0;
     }
 
+    .proyectos-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .proyecto {
+        background: #1a1a2e;
+        padding: 15px;
+        border-radius: 6px;
+        border: 1px solid #2a2a4a;
+    }
+
+    .proyecto:hover {
+        border-color: #7c3aed;
+    }
+
+    .proyecto h3 {
+        color: #38bdf8;
+        margin-bottom: 0 0 8px 0;
+        font-size: 16px;
+    }
+
+    .proyecto p {
+        color: #aaaaaa;
+        margin-bottom: 0 0 8px 0;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .proyecto a {
+        color: #a78bfa;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .lenguaje {
+        display: inline-block;
+        background: #7c3aed;
+        color: #f89820;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    .lenguaje.html {
+        background: #e34c26;
+        color: #e34f26;
+        border-color: #e34c26;
+    }
+
     /* barra de navegacion */
     .navbar {
         background: #1a1a2e;
@@ -342,13 +394,13 @@ html {
     <h2>Formación y experiencia</h2>
 
 <div class="tarjeta">
-    <h3>Desarrollo de Aplicaciones Web - DAW</h3>
+    <h3>Desarrollo de Aplicaciones Web DAW</h3>
     <div class="fecha">2025 - Actualidad (1º año)</div>
     <p>Aprendiendo HTML, CSS, JavaScript, Java, PHP, bases de datos... Prácticas para 2026.</p>
 </div>
 
 <div class="tarjeta">
-    <h3>Técnico en Telecomunicaciones - INSMOELCA</h3>
+    <h3>Técnico en Telecomunicaciones INSMOELCA</h3>
     <div class="fecha">3 meses</div>
     <ul>
         <li>Instalación de sistemas de seguridad y contra incendios</li>
@@ -360,7 +412,7 @@ html {
 </div>
 
 <div class="tarjeta">
-    <h3>Grado Medio - Telecomunicaciones</h3>
+    <h3>Grado Medio Telecomunicaciones</h3>
     <div class="fecha">2021 - 2023</div>
     <p>Redes, sistemas de seguridad, equipos informáticos y telecomunicaciones.</p>
 </div>
@@ -370,6 +422,19 @@ html {
     <div class="fecha">2014 - 2018</div>
 </div>
 
+</div>
+
+<div class="seccion" id="proyectos">
+    <h2>Proyectos Académicos Grupales.</h2>
+    <div class="proyectos-grid">
+        <div class="proyecto">
+            <span class="lenguaje">Java</span>
+            <h3>ProyectoJavaRestaurante.</h3>
+            <p>Descripción: Pedidos Restaurante Java. Este proyecto es una práctica de clase donde creamos un objeto Pedido para simular un pedido de un restaurante usando Java. 
+            La idea es aprender conceptos básicos de Programación Orientada a Objetos como clases, objetos, encapsulación, enum, atributos estáticos y algunas validaciones.
+            </p>
+        </div>
+    </div>
 </div>
 
 <div class="seccion" id="cursos">
