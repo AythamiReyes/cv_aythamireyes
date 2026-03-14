@@ -274,6 +274,13 @@ html {
     }
 
     /* habilidades */
+
+    .habilidades-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
     .habilidad {
         display: inline-block;
         background: #1a1a2e;
@@ -283,6 +290,10 @@ html {
         border-radius: 5px;
         font-size: 14px;
         margin: 4px;
+    }
+
+    .habilidad:hover {
+        border-color: #7c3aed;
     }
 
     /* contacto */
@@ -437,6 +448,8 @@ html {
     </div>
 </div>
 
+
+
 <div class="seccion" id="cursos">
     <h2>Cursos</h2>
     <div class="cursos">
@@ -494,7 +507,7 @@ html {
 
 <div class="seccion" id="habilidades">
     <h2>Habilidades</h2>
-    <div>
+    <div class="habilidades-grid">
         <span class="habilidad">🤝 Trabajo en equipo</span>
         <span class="habilidad">📖 Ganas de aprender</span>
         <span class="habilidad">✅ Responsabilidad</span>
